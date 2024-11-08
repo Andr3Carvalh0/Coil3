@@ -1,6 +1,7 @@
 package pt.andrecoil
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,10 +22,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<ShapeableImageView>(R.id.noanimation)
+        findViewById<ImageView>(R.id.noanimation)
             .load(R.drawable.cover) { crossfade(false) }
 
-        findViewById<ShapeableImageView>(R.id.crossfade)
+        findViewById<ImageView>(R.id.crossfade)
             .load(R.drawable.cover) { crossfade(true) }
     }
 }
