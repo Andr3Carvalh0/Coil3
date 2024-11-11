@@ -42,6 +42,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.coil2)
+    implementation(libs.coil2.base)
     implementation(libs.coil3)
 
     testImplementation(libs.junit)

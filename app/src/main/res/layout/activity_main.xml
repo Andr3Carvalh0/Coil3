@@ -7,9 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/noanimation"
+        android:id="@+id/noanimation2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -19,7 +25,7 @@
         android:background="#FF0000"
         app:layout_constrainedWidth="true"
         app:layout_constraintDimensionRatio="1:1.44"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/middle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.3"
@@ -27,18 +33,18 @@
         app:strokeWidth="1dp" />
 
     <TextView
-        android:id="@+id/noanimation_text"
+        android:id="@+id/noanimation2_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/noanimation"
-        app:layout_constraintStart_toStartOf="@id/noanimation"
-        app:layout_constraintEnd_toEndOf="@id/noanimation"
+        app:layout_constraintTop_toBottomOf="@id/noanimation2"
+        app:layout_constraintStart_toStartOf="@id/noanimation2"
+        app:layout_constraintEnd_toEndOf="@id/noanimation2"
         android:textAlignment="center"
-        android:text="No crossfade" />
+        android:text="Coil2: No crossfade" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/crossfade"
+        android:id="@+id/crossfade2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -48,9 +54,9 @@
         android:background="#FF0000"
         app:layout_constrainedWidth="true"
         app:layout_constraintDimensionRatio="1:1.44"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/middle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/noanimation_text"
+        app:layout_constraintTop_toBottomOf="@id/noanimation2_text"
         app:layout_constraintWidth_percent="0.3"
         app:strokeColor="?colorControlHighlight"
         app:strokeWidth="1dp" />
@@ -59,10 +65,68 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/crossfade"
-        app:layout_constraintStart_toStartOf="@id/crossfade"
-        app:layout_constraintEnd_toEndOf="@id/crossfade"
+        app:layout_constraintTop_toBottomOf="@id/crossfade2"
+        app:layout_constraintStart_toStartOf="@id/crossfade2"
+        app:layout_constraintEnd_toEndOf="@id/crossfade2"
         android:textAlignment="center"
-        android:text="Crossfade" />
+        android:text="Coil2: Crossfade" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/noanimation3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:background="#FF0000"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintDimensionRatio="1:1.44"
+        app:layout_constraintStart_toEndOf="@id/middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:strokeColor="?colorControlHighlight"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/noanimation3_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/noanimation3"
+        app:layout_constraintStart_toStartOf="@id/noanimation3"
+        app:layout_constraintEnd_toEndOf="@id/noanimation3"
+        android:textAlignment="center"
+        android:text="Coil3: No crossfade" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/crossfade3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:background="#FF0000"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintDimensionRatio="1:1.44"
+        app:layout_constraintStart_toEndOf="@id/middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noanimation3_text"
+        app:layout_constraintWidth_percent="0.3"
+        app:strokeColor="?colorControlHighlight"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/crossfade3"
+        app:layout_constraintStart_toStartOf="@id/crossfade3"
+        app:layout_constraintEnd_toEndOf="@id/crossfade3"
+        android:textAlignment="center"
+        android:text="Coil3: Crossfade" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

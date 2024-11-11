@@ -6,9 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import coil3.load
 import coil3.request.crossfade
-import com.google.android.material.imageview.ShapeableImageView
+import coil3.load as load3
+import coil.load as load2
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,10 +22,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<ImageView>(R.id.noanimation)
-            .load(R.drawable.cover) { crossfade(false) }
+        findViewById<ImageView>(R.id.noanimation2)
+            .load2(R.drawable.cover) { crossfade(false) }
 
-        findViewById<ImageView>(R.id.crossfade)
-            .load(R.drawable.cover) { crossfade(true) }
+        findViewById<ImageView>(R.id.crossfade2)
+            .load2(R.drawable.cover) { crossfade(true) }
+
+        findViewById<ImageView>(R.id.noanimation3)
+            .load3(R.drawable.cover) { crossfade(false) }
+
+        findViewById<ImageView>(R.id.crossfade3)
+            .load3(R.drawable.cover) { crossfade(true) }
     }
 }
